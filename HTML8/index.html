@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<style>
+    #opinionTextBox {
+    height:150px;
+    font-size:10pt;
+    width:450px;
+    vertical-align: text-top;
+    }
+</style>
+
+<body>
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Jūsų informacija:</legend>
+            Vardas:<br>
+            <input type="text" name="firstname" value="">
+            <br>
+            Pavardė:<br>
+            <input type="text" name="lastname" value="">
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Klausimai:</legend>
+            Kaip sužinojote apie mus?
+            <select>
+                <option value="google">Google</option>
+                <option value="adverticement">Reklama</option>
+                <option value="friends">Draugai</option>
+                <option value="other">Kita</option>
+            </select>
+            <br><br>
+            Ar apsilankysite vėl?
+            <input type="radio" name="returnAgain" value="yes"> Taip
+            <input type="radio" name="returnAgain" value="no"> Ne
+            <input type="radio" name="returnAgain" value="maybe"> Galbūt
+            <br><br>
+            Ką manote apie kursą?
+            <br>
+            <input id="opinionTextBox" type="text" name="opinionOnCourse" value="Rašykite viską ką galvojate"><br>
+            Pažymėkite programavimo kalbas su kuriomis esate susipažinę:
+            <br>
+            <input type="checkbox" name="familiarWithC#" value=""> C#
+            <input type="checkbox" name="familiarWithJava" value=""> JAVA
+            <input type="checkbox" name="familiarWithPhp" value=""> PHP
+            <br>
+            <input type="checkbox" name="familiarWithHtml" value=""> HTML
+            <input type="checkbox" name="familiarWithCss" value=""> CSS
+            <input type="checkbox" name="familiarWithJavaScript" value=""> JavaAcript
+            <br>
+            <input type="checkbox" name="familiarWithPython" value=""> Python
+            <input type="checkbox" name="familiarWithRuby" value=""> Ruby
+            <br><br>
+            <input type="submit" value="Siųsti">
+        </fieldset>
+    </form>
+</body>
+
+</html>
