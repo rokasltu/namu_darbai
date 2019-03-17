@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namu darbas JS3</title>
+</head>
+
+<body>
+    Pasirinkite kompiuterio spalva
+    <form>
+        <select id="selectCol" onchange="selectColor()">
+            <option></option>
+            <option>Juoda</option>
+            <option>Raudona</option>
+            <option>Zalia</option>
+            <option>Sidabrine</option>
+        </select>
+    </form>
+       <script>
+            var preke = {
+            title: "Nešiojamas kompiuteris",
+            description: "NVIDIA GeForce GTX 1070 grafinis adapteris su Max-Q4 technologija, Intel Core 8th Generation procesorius ir pažangi aušinimo sistema suteikia reikiamą galią, nesvarbu, kur būtumėte.",
+            discount: 30,
+            isItNew: true,
+            color: 0,
+            price: 699.00,
+            currency: "EUR"
+            };
+            var color = "green";
+            if (preke.isItNew == false){color = "black"}
+            function selectColor() {
+                var x = document.getElementById("selectCol");
+                var i = x.selectedIndex;
+                preke.color = x.options[i].index -1;
+                document.write('<table border = 2px style="color:' + color + '"><tr> <td> Preke </td><td>' + preke.title + '</td> </tr> <tr> <td> Aprasymas </td><td>' + preke.description + '</td> </tr><tr> <td> Kaina </td><td>' + preke.price + ' ' + preke.currency + '</td> </tr><tr> <td> Nuolaida </td><td>' + preke.discount + '%</td> </tr> <tr> <td> Kaina po nuolaidos</td><td>' + preke.price*(100-preke.discount)/100 + ' ' + preke.currency + '</td> </tr><tr> <td> Spalva </td><td>' + preke.color + '</td> </tr><tr> <td> Ar naujas? </td><td>' + preke.isItNew + '</td> </tr> </table>')
+                }
+        </script>
+</body>
+</html>
